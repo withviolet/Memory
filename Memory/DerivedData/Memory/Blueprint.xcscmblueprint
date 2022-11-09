@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5613B985D03F704AB364BB8E17767F0313715FEF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5613B985D03F704AB364BB8E17767F0313715FEF" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E39B30EF-FEBF-4053-A7D8-79502DD5EC50",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5613B985D03F704AB364BB8E17767F0313715FEF" : "Memory\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Memory",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Memory\/Memory.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git@github.com:withviolet\/Memory.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5613B985D03F704AB364BB8E17767F0313715FEF"
+    }
+  ]
+}
