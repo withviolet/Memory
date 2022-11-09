@@ -8,20 +8,56 @@
 import SwiftUI
 
 struct ContentView: View {
+    var emojis = ["🚲", "🚘", "🚀", "🛥", "🚡", "🚲", "🎡", "🚅", "🗽", "🚇", "🚨", "🚢"]
+    @State var emojiCount = 5
+    
     var body: some View {
-        HStack {
-            CardView(faceUp: true)
-            CardView()
-            CardView()
-            CardView() // 在这里设定的初始值，的权限高于在CardView body中的
+        VStack {
+            HStack {
+                // foreach需要类是唯一的，id: \.self的意思是强制把string本身作为自己的唯一标识
+                ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
+                    CardView(content: emoji) // 在这里设定的faceup初始值，的权限高于在CardView body中的
+                }
+            }
+            .padding(.horizontal)
+            .foregroundColor(.red)
+            Spacer()
+            HStack {
+                removeButton
+                Spacer()
+                addButton
+            }
+            .font(.largeTitle)
+            .foregroundColor(.red)
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
-        .foregroundColor(.red)
     }
+    
+    var removeButton: some View {
+        Button {
+            if emojiCount > 1 {
+                emojiCount -= 1
+            }
+        } label: {
+            Image(systemName: "minus.circle")
+        }
+    }
+    
+    var addButton: some View {
+        Button {
+            if emojiCount < emojis.count {
+                emojiCount += 1
+            }
+        } label: {
+            Image(systemName: "plus.circle")
+        }
+    }
+    
 }
 
 struct CardView: View {
-    @State var faceUp: Bool = false // 卡牌是否面朝上
+    var content: String
+    @State var faceUp: Bool = true // 卡牌是否面朝上
     
     var body: some View {
         ZStack {
@@ -29,12 +65,13 @@ struct CardView: View {
             if faceUp{
                 shape.fill().foregroundColor(.white)
                 shape.stroke(lineWidth: 3)
-                Text("✈️").font(.largeTitle)
+                Text(content).font(.largeTitle)
             } else {
                 shape.fill()
             }
         }
         .onTapGesture {
+            // 当在这里修改了@ State修饰的变量时，其实是修改了内存里的值，视图知道faceup被修改后，会重新刷新整个视图
             faceUp = !faceUp
         }
         
