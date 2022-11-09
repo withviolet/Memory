@@ -14,13 +14,13 @@ extension ContentView_Previews {
 extension ContentView {
     @_dynamicReplacement(for: body) private var __preview__body: some View {
         #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 12)
-        VStack {
-            Image(systemName: __designTimeString("#6801.[1].[0].property.[0].[0].arg[0].value.[0].arg[0].value", fallback: "globe"))
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text(__designTimeString("#6801.[1].[0].property.[0].[0].arg[0].value.[1].arg[0].value", fallback: "Hello, world!"))
+        ZStack {
+            RoundedRectangle(cornerRadius: __designTimeInteger("#6801.[1].[0].property.[0].[0].arg[0].value.[0].arg[0].value", fallback: 20))
+                .stroke(lineWidth: __designTimeInteger("#6801.[1].[0].property.[0].[0].arg[0].value.[0].modifier[0].arg[0].value", fallback: 3))
+            Text(__designTimeString("#6801.[1].[0].property.[0].[0].arg[0].value.[1].arg[0].value", fallback: "H"))
         }
-        .padding()
+        .padding(.horizontal)
+        .foregroundColor(.red)
     
 #sourceLocation()
     }
