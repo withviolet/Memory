@@ -1060,6 +1060,74 @@
 			<key>uniqueIdentifier</key>
 			<string>97FADE26-FB4C-4AF1-811C-9F5067D98A6C</string>
 		</dict>
+		<key>9CD5059D-21BB-4B5C-8513-C6845E0D0FB0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9CD5059D-21BB-4B5C-8513-C6845E0D0FB0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Memory project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Memory</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews Memory</string>
+			<key>timeStartedRecording</key>
+			<real>689678966.83523405</real>
+			<key>timeStoppedRecording</key>
+			<real>689678966.85652602</real>
+			<key>title</key>
+			<string>Build for Previews Memory</string>
+			<key>uniqueIdentifier</key>
+			<string>9CD5059D-21BB-4B5C-8513-C6845E0D0FB0</string>
+		</dict>
+		<key>AD4C785E-0179-488A-952A-26AFBCDAB734</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AD4C785E-0179-488A-952A-26AFBCDAB734.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Memory project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Memory</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews Memory</string>
+			<key>timeStartedRecording</key>
+			<real>689678965.40100801</real>
+			<key>timeStoppedRecording</key>
+			<real>689678966.17320895</real>
+			<key>title</key>
+			<string>Build for Previews Memory</string>
+			<key>uniqueIdentifier</key>
+			<string>AD4C785E-0179-488A-952A-26AFBCDAB734</string>
+		</dict>
 		<key>BCC824A5-2B52-4D97-AEC1-28061A40E15C</key>
 		<dict>
 			<key>className</key>

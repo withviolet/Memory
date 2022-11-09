@@ -39,36 +39,6 @@ extension CardView {
 }
 
 extension ContentView {
-    @_dynamicReplacement(for: addButton) private var __preview__addButton: some View {
-        #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 49)
-        Button {
-            if emojiCount < emojis.count {
-                emojiCount += __designTimeInteger("#6801.[1].[4].property.[0].[0].arg[0].value.[0].[0].[0].[0]", fallback: 1)
-            }
-        } label: {
-            Image(systemName: __designTimeString("#6801.[1].[4].property.[0].[0].arg[1].value.[0].arg[0].value", fallback: "plus.circle"))
-        }
-    
-#sourceLocation()
-    }
-}
-
-extension ContentView {
-    @_dynamicReplacement(for: removeButton) private var __preview__removeButton: some View {
-        #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 39)
-        Button {
-            if emojiCount > 1 {
-                emojiCount -= __designTimeInteger("#6801.[1].[3].property.[0].[0].arg[0].value.[0].[0].[0].[0]", fallback: 1)
-            }
-        } label: {
-            Image(systemName: __designTimeString("#6801.[1].[3].property.[0].[0].arg[1].value.[0].arg[0].value", fallback: "minus.circle"))
-        }
-    
-#sourceLocation()
-    }
-}
-
-extension ContentView {
     @_dynamicReplacement(for: body) private var __preview__body: some View {
         #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 15)
         VStack {
@@ -84,13 +54,13 @@ extension ContentView {
             .padding(.horizontal)
             .foregroundColor(.red)
             Spacer()
-            HStack {
-                removeButton
-                Spacer()
-                addButton
-            }
-            .font(.largeTitle)
-            .padding(.horizontal)
+//            HStack {
+//                removeButton
+//                Spacer()
+//                addButton
+//            }
+//            .font(.largeTitle)
+//            .padding(.horizontal)
         }
     
 #sourceLocation()

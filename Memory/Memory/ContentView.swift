@@ -25,35 +25,35 @@ struct ContentView: View {
             .padding(.horizontal)
             .foregroundColor(.red)
             Spacer()
-            HStack {
-                removeButton
-                Spacer()
-                addButton
-            }
-            .font(.largeTitle)
-            .padding(.horizontal)
+//            HStack {
+//                removeButton
+//                Spacer()
+//                addButton
+//            }
+//            .font(.largeTitle)
+//            .padding(.horizontal)
         }
     }
     
-    var removeButton: some View {
-        Button {
-            if emojiCount > 1 {
-                emojiCount -= 1
-            }
-        } label: {
-            Image(systemName: "minus.circle")
-        }
-    }
-    
-    var addButton: some View {
-        Button {
-            if emojiCount < emojis.count {
-                emojiCount += 1
-            }
-        } label: {
-            Image(systemName: "plus.circle")
-        }
-    }
+//    var removeButton: some View {
+//        Button {
+//            if emojiCount > 1 {
+//                emojiCount -= 1
+//            }
+//        } label: {
+//            Image(systemName: "minus.circle")
+//        }
+//    }
+//    
+//    var addButton: some View {
+//        Button {
+//            if emojiCount < emojis.count {
+//                emojiCount += 1
+//            }
+//        } label: {
+//            Image(systemName: "plus.circle")
+//        }
+//    }
     
 }
 
