@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    var emojis = ["🚲", "🚘", "🚀", "🛥", "🚡", "🚲", "🎡", "🚅", "🗽", "🚇", "🚨", "🚢"]
+    var emojis = ["🚲", "🚘", "🚀", "🛥", "🚡", "💺", "🎡", "🚅", "🗽", "🚇", "🚨", "🚢"]
     @State var emojiCount = 5
     
     var body: some View {
         VStack {
-            HStack {
-                // foreach需要类是唯一的，id: \.self的意思是强制把string本身作为自己的唯一标识
-                ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
-                    CardView(content: emoji) // 在这里设定的faceup初始值，的权限高于在CardView body中的
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 64))]) {
+                    // foreach需要类是唯一的，id: \.self的意思是强制把string本身作为自己的唯一标识
+                    ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
+                        CardView(content: emoji).aspectRatio(2 / 3, contentMode: .fit)
+                        // 在这里设定的faceup初始值，的权限高于在CardView body中的
+                    }
                 }
             }
             .padding(.horizontal)
@@ -28,7 +31,6 @@ struct ContentView: View {
                 addButton
             }
             .font(.largeTitle)
-            .foregroundColor(.red)
             .padding(.horizontal)
         }
     }
@@ -64,7 +66,8 @@ struct CardView: View {
             let shape = RoundedRectangle(cornerRadius: 20)
             if faceUp{
                 shape.fill().foregroundColor(.white)
-                shape.stroke(lineWidth: 3)
+                shape.strokeBorder(lineWidth: 3)
+                // stroke 画出来的线侧面会被挡住，但是strokeBorder画出来的线不会
                 Text(content).font(.largeTitle)
             } else {
                 shape.fill()

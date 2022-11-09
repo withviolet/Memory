@@ -1,16 +1,5 @@
 {
   "source": "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift",
-  "tables": {
-    "Localizable": [
-      {
-        "comment": "",
-        "key": "-"
-      },
-      {
-        "comment": "",
-        "key": "+"
-      }
-    ]
-  },
+  "tables": {},
   "version": 1
 }

@@ -4,7 +4,7 @@ import SwiftUI
 
 extension ContentView_Previews {
     @_dynamicReplacement(for: previews) private static var __preview__previews: some View {
-        #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 83)
+        #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 86)
         ContentView()
             .preferredColorScheme(.dark)
         ContentView()
@@ -16,12 +16,13 @@ extension ContentView_Previews {
 
 extension CardView {
     @_dynamicReplacement(for: body) private var __preview__body: some View {
-        #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 63)
+        #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 65)
         ZStack {
             let shape = RoundedRectangle(cornerRadius: __designTimeInteger("#6801.[2].[2].property.[0].[0].arg[0].value.[0].value.arg[0].value", fallback: 20))
             if faceUp{
                 shape.fill().foregroundColor(.white)
-                shape.stroke(lineWidth: __designTimeInteger("#6801.[2].[2].property.[0].[0].arg[0].value.[1].[0].[1].modifier[0].arg[0].value", fallback: 3))
+                shape.strokeBorder(lineWidth: __designTimeInteger("#6801.[2].[2].property.[0].[0].arg[0].value.[1].[0].[1].modifier[0].arg[0].value", fallback: 3))
+                // stroke 画出来的线侧面会被挡住，但是strokeBorder画出来的线不会
                 Text(content).font(.largeTitle)
             } else {
                 shape.fill()
@@ -39,7 +40,7 @@ extension CardView {
 
 extension ContentView {
     @_dynamicReplacement(for: addButton) private var __preview__addButton: some View {
-        #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 47)
+        #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 49)
         Button {
             if emojiCount < emojis.count {
                 emojiCount += __designTimeInteger("#6801.[1].[4].property.[0].[0].arg[0].value.[0].[0].[0].[0]", fallback: 1)
@@ -54,7 +55,7 @@ extension ContentView {
 
 extension ContentView {
     @_dynamicReplacement(for: removeButton) private var __preview__removeButton: some View {
-        #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 37)
+        #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 39)
         Button {
             if emojiCount > 1 {
                 emojiCount -= __designTimeInteger("#6801.[1].[3].property.[0].[0].arg[0].value.[0].[0].[0].[0]", fallback: 1)
@@ -71,10 +72,13 @@ extension ContentView {
     @_dynamicReplacement(for: body) private var __preview__body: some View {
         #sourceLocation(file: "/Users/paintitcolorful/StudySpace/Memory/Memory/Memory/ContentView.swift", line: 15)
         VStack {
-            HStack {
-                // foreach需要类是唯一的，id: \.self的意思是强制把string本身作为自己的唯一标识
-                ForEach(emojis[__designTimeInteger("#6801.[1].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].value.[0]", fallback: 0)..<emojiCount], id: \.self) { emoji in
-                    CardView(content: emoji) // 在这里设定的faceup初始值，的权限高于在CardView body中的
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: __designTimeInteger("#6801.[1].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.arg[0].value", fallback: 64)))]) {
+                    // foreach需要类是唯一的，id: \.self的意思是强制把string本身作为自己的唯一标识
+                    ForEach(emojis[__designTimeInteger("#6801.[1].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].arg[0].value.[0].value.[0]", fallback: 0)..<emojiCount], id: \.self) { emoji in
+                        CardView(content: emoji).aspectRatio(__designTimeInteger("#6801.[1].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].arg[2].value.[0].modifier[0].arg[0].value.[0]", fallback: 2) / __designTimeInteger("#6801.[1].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].arg[2].value.[0].modifier[0].arg[0].value.[1]", fallback: 3), contentMode: .fit)
+                        // 在这里设定的faceup初始值，的权限高于在CardView body中的
+                    }
                 }
             }
             .padding(.horizontal)
@@ -86,7 +90,6 @@ extension ContentView {
                 addButton
             }
             .font(.largeTitle)
-            .foregroundColor(.red)
             .padding(.horizontal)
         }
     

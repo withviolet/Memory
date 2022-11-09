@@ -516,6 +516,40 @@
 			<key>uniqueIdentifier</key>
 			<string>61968B20-2B36-4A02-9056-DC980A474E21</string>
 		</dict>
+		<key>666351EE-5655-4243-BB68-115F27E76F13</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>666351EE-5655-4243-BB68-115F27E76F13.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Memory project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Memory</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews Memory</string>
+			<key>timeStartedRecording</key>
+			<real>689677116.18858194</real>
+			<key>timeStoppedRecording</key>
+			<real>689677116.91417503</real>
+			<key>title</key>
+			<string>Build for Previews Memory</string>
+			<key>uniqueIdentifier</key>
+			<string>666351EE-5655-4243-BB68-115F27E76F13</string>
+		</dict>
 		<key>6A470E9E-FC44-43C3-A1A2-6A426090C813</key>
 		<dict>
 			<key>className</key>
@@ -1161,6 +1195,40 @@
 			<string>Build for Previews Memory</string>
 			<key>uniqueIdentifier</key>
 			<string>C5918CAB-22C7-4803-8CE7-2E3973B49785</string>
+		</dict>
+		<key>C96C60E6-49ED-407F-92BE-C4383B814837</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C96C60E6-49ED-407F-92BE-C4383B814837.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Memory project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Memory</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews Memory</string>
+			<key>timeStartedRecording</key>
+			<real>689677125.92091703</real>
+			<key>timeStoppedRecording</key>
+			<real>689677126.51172805</real>
+			<key>title</key>
+			<string>Build for Previews Memory</string>
+			<key>uniqueIdentifier</key>
+			<string>C96C60E6-49ED-407F-92BE-C4383B814837</string>
 		</dict>
 		<key>C9A66B9B-EC1B-4DE0-BCE9-3D278B12AE67</key>
 		<dict>
