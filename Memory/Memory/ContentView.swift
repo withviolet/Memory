@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    var emojis = ["🚲", "🚘", "🚀", "🛥", "🚡", "💺", "🎡", "🚅", "🗽", "🚇", "🚨", "🚢"]
-    @State var emojiCount = 5
+//    var emojis = ["🚲", "🚘", "🚀", "🛥", "🚡", "💺", "🎡", "🚅", "🗽", "🚇", "🚨", "🚢"]
+//    @State var emojiCount = 5
+    
+    var viewModel: EmojiMemoryGame
     
     var body: some View {
         VStack {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 64))]) {
                     // foreach需要类是唯一的，id: \.self的意思是强制把string本身作为自己的唯一标识
-                    ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
+                    ForEach(viewModel.model.cards, id: \.self) { emoji in
                         CardView(content: emoji).aspectRatio(2 / 3, contentMode: .fit)
                         // 在这里设定的faceup初始值，的权限高于在CardView body中的
                     }
