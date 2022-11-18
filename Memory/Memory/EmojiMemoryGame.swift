@@ -25,8 +25,8 @@ class EmojiMemoryGame {
         model.cards
     }
     
-//    foo () {
-//        let x = emojis[0] // error ,如果要在方法中访问emojis，得写上 EmojiMemoryGame.emojis,
-//    }
-    
+    // MARK: - intents
+    func choose() {
+        model.choose()
+    }
 }

@@ -9,27 +9,30 @@ import Foundation
 
 struct MemoryGame<CardContent> {
     
-    var cards: Array<Card>
+    private(set) var cards: Array<Card>
     
-    func choose(_ card: Card) {
-        
+    mutating func choose(_ card: Card) {
+        let chosenIndex = index(of: card)
+        cards[chosenIndex]
     }
     
     init(numbersOfPairsOfCards: Int, createCardContent: (Int) -> CardContent ) {
         
-        var cards = Array<Card>()
+        cards = Array<Card>()
         
         for pairIndex in 0..<numbersOfPairsOfCards {
             let content = createCardContent(pairIndex)
-            cards.append(Card(content: content))
+            cards.append(Card(content: content, id: pairIndex * 2))
+            cards.append(Card(content: content, id: pairIndex * 2 + 1))
         }
-        self.cards = cards
+        
     }
     
-    struct Card {
+    struct Card: Identifiable{
         var isFaceUp: Bool = true
         var isMatched: Bool = false
         var content: CardContent
+        var id: Int
     }
     
 }
