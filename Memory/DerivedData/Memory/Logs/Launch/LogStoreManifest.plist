@@ -5,6 +5,52 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>4B2B5914-BEC0-4A01-8F21-E6FEE84BBB37</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>CA45C929-6271-4633-920D-3A38DD1DF663</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-Memory-2022.11.19_10-20-38-+0800.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Memory project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Memory</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Memory</string>
+			<key>timeStartedRecording</key>
+			<real>690517238.91441</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run Memory</string>
+			<key>uniqueIdentifier</key>
+			<string>4B2B5914-BEC0-4A01-8F21-E6FEE84BBB37</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -11,7 +11,7 @@ struct ContentView: View {
     //    var emojis = ["🚲", "🚘", "🚀", "🛥", "🚡", "💺", "🎡", "🚅", "🗽", "🚇", "🚨", "🚢"]
     //    @State var emojiCount = 5
     
-    var viewModel: EmojiMemoryGame
+    @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
         ScrollView {
@@ -20,6 +20,9 @@ struct ContentView: View {
                 ForEach(viewModel.cards) { card in
                     CardView(card: card)
                         .aspectRatio(2/3, contentMode: .fit)
+                        .onTapGesture {
+                            viewModel.choose(card)
+                        }
                 }
             }
             
@@ -53,9 +56,9 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: EmojiMemoryGame.emojis)
-            .preferredColorScheme(.dark)
-        ContentView(viewModel: EmojiMemoryGame.emojis)
-            .preferredColorScheme(.light)
+        ContentView(viewModel: EmojiMemoryGame())
+//            .preferredColorScheme(.dark)
+//        ContentView(viewModel: EmojiMemoryGame.emojis)
+//            .preferredColorScheme(.light)
     }
 }

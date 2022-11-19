@@ -13,7 +13,17 @@ struct MemoryGame<CardContent> {
     
     mutating func choose(_ card: Card) {
         let chosenIndex = index(of: card)
-        cards[chosenIndex]
+        cards[chosenIndex].isFaceUp.toggle()
+        print("选中的card: \(cards[chosenIndex].content)")
+    }
+    
+    func index(of card: Card)-> Int {
+        for index in 0 ..< cards.count {
+            if cards[index].id == card.id {
+                return index
+            }
+        }
+        return 0
     }
     
     init(numbersOfPairsOfCards: Int, createCardContent: (Int) -> CardContent ) {
